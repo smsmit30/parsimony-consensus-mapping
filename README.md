@@ -68,31 +68,28 @@ Construct a genetic consensus map from several diferent population genetic maps 
 #### the following is for if you want to run the scripts without using the wrapper
 [2] parse_maps takes the original population files and splits them into individual 
 	linkage group files
-	[usage]
 	
-	python parse_maps.py <path/to/unparsed/population/maps>
+	[usage] python parse_maps.py <path/to/unparsed/population/maps>
 	
 	[output]
 		Maps (directory within the original unparsed population directory)
 			contains all the population linkage groups as individual 
 			text files
 
-[3]	awesomeMap does pair wise alignments of all linkage groups and scores each
+[3] awesomeMap does pair wise alignments of all linkage groups and scores each
 	alignment. The pairwise scores are then used to produce a distance matrix 
 	which can be used to produce a neighbor joining tree showing which lgs are 
 	most closely related.
-	[usage]
 	
-	perl awesomeMap.pl <path/to/parsed/populations/*.txt > <output/file.phy>
+	[usage] perl awesomeMap.pl <path/to/parsed/populations/*.txt > <output/file.phy>
 	example: awesomeMap.pl /.../Sample_population_maps/Maps/*.txt > temp.phy
 	
 	[output]
 		temp.phy
 
 [4] phyFix is used to reformat the distance matrix built by awesomeMap.
-	[usage]
 	
-	perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
+	[usage] perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
 	example: phyFix_new2.pl /.../Desktop/temp.phy > /.../Desktop/fixed_temp.phy
 	
 	[output]
@@ -100,9 +97,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	
 [5] rapidnj uses the distance matrix produced by awesomeMap to produce a neighbor 
 	joining tree in newick format.
-	[usage]
 	
-	./rapidnj -i pd fixed_file.phy > rnjtree.txt
+	[usage] ./rapidnj -i pd fixed_file.phy > rnjtree.txt
 	
 	[output]
 		rnjtree.txt
@@ -111,9 +107,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	of the newick tree. and sets up directories containing the linkage groups 
 	corresponding to the tips identified. This directory set up is required by 
 	MergeMapOutCollect.py
-	[usage]
 	
-	python get_tips.py <path/to/newicktree.txt> <path/to//un-parsed/pop/map/files>
+	[usage] python get_tips.py <path/to/newicktree.txt> <path/to//un-parsed/pop/map/files>
 	example: python get_tips.py rnjtree.txt /Users/ss324/Desktop/Sample_pop_maps
 	
 	[output]
@@ -126,9 +121,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 		Tips.txt
 		OUTPUT (empty directory)
 [7] MergeMapOutCollect is a wrapper for running the mergemap application.
-	[usage]
 	
-	python MergeMapOutCollect.py </input/dir/> </output/dir/> </MergeMap/dir/>
+	[usage] python MergeMapOutCollect.py </input/dir/> </output/dir/> </MergeMap/dir/>
 	example: MergeMapOutCollect.py /.../mergetips/ /.../OUTPUT/ /.../MergeMap/
 	
 	[output]
@@ -150,9 +144,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 [9] Determine_Success checks each merge to make sure the two linkage groups were merged 
 	together successfully resulting in a single linkage group and prepares for the 
 	next iteration.
-	[usage]
 	
-	python Determine_Success.py <path/to/working_directory>
+	[usage] python Determine_Success.py <path/to/working_directory>
 	example: Determine_success.py /.../Desktop/Sample_pop_maps/working_directory
 	
 	[output]
