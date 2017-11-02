@@ -36,9 +36,9 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	
 	
 ### Script Descriptions
-[1]	the parsimony wrapper allows the user to run a single script which will iterate 
-	through all the other scripts. Running this script will use the input population
-	map files to create a consensus map
+1. the parsimony wrapper allows the user to run a single script which will iterate 
+through all the other scripts. Running this script will use the input population
+map files to create a consensus map
 	
 This script requires 2 additional Arguments. The first is the 
 directory containing the population map files and the second is the number of 
@@ -66,8 +66,8 @@ iterations you would like to cycle through.
 			Used_Maps (directory)
 				linkage group .txt files that were used in a merge
 	
-#### the following is for if you want to run the scripts without using the wrapper
-[2] parse_maps takes the original population files and splits them into individual 
+**the following is for if you want to run the scripts without using the wrapper**
+1. parse_maps takes the original population files and splits them into individual 
 	linkage group files
 	
 	python parse_maps.py <path/to/unparsed/population/maps>
@@ -77,7 +77,7 @@ iterations you would like to cycle through.
 			contains all the population linkage groups as individual 
 			text files
 
-[3] awesomeMap does pair wise alignments of all linkage groups and scores each
+1. awesomeMap does pair wise alignments of all linkage groups and scores each
 	alignment. The pairwise scores are then used to produce a distance matrix 
 	which can be used to produce a neighbor joining tree showing which lgs are 
 	most closely related.
@@ -88,7 +88,7 @@ iterations you would like to cycle through.
 	[output]
 		temp.phy
 
-[4] phyFix is used to reformat the distance matrix built by awesomeMap.
+1. phyFix is used to reformat the distance matrix built by awesomeMap.
 	
 	perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
 	example: phyFix_new2.pl /.../Desktop/temp.phy > /.../Desktop/fixed_temp.phy
@@ -96,7 +96,7 @@ iterations you would like to cycle through.
 	[output]
 		fixed_temp.phy
 	
-[5] rapidnj uses the distance matrix produced by awesomeMap to produce a neighbor 
+1. rapidnj uses the distance matrix produced by awesomeMap to produce a neighbor 
 	joining tree in newick format.
 	
 	./rapidnj -i pd fixed_file.phy > rnjtree.txt
@@ -104,7 +104,7 @@ iterations you would like to cycle through.
 	[output]
 		rnjtree.txt
 	
-[6] get_tips is used to extract the most extreme pairs of linkage groups from the tips 
+1. get_tips is used to extract the most extreme pairs of linkage groups from the tips 
 	of the newick tree. and sets up directories containing the linkage groups 
 	corresponding to the tips identified. This directory set up is required by 
 	MergeMapOutCollect.py
@@ -121,7 +121,7 @@ iterations you would like to cycle through.
 					config text file (.txt)
 		Tips.txt
 		OUTPUT (empty directory)
-[7] MergeMapOutCollect is a wrapper for running the mergemap application.
+1. MergeMapOutCollect is a wrapper for running the mergemap application.
 	
 	python MergeMapOutCollect.py </input/dir/> </output/dir/> </MergeMap/dir/>
 	example: MergeMapOutCollect.py /.../mergetips/ /.../OUTPUT/ /.../MergeMap/
@@ -140,9 +140,9 @@ iterations you would like to cycle through.
 		used. DertermineSuccess.py deletes the contents of OUTPUT and renames 
 		and uses the contents of OUTIn 
 		
-[8] The MergeMap application is called by the MergeMapOutCollect script.
+1. The MergeMap application is called by the MergeMapOutCollect script.
 
-[9] Determine_Success checks each merge to make sure the two linkage groups were merged 
+1. Determine_Success checks each merge to make sure the two linkage groups were merged 
 	together successfully resulting in a single linkage group and prepares for the 
 	next iteration.
 	
