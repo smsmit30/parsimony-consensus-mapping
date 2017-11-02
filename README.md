@@ -5,18 +5,18 @@ Construct a genetic consensus map from several diferent population genetic maps 
 
 ### Scripts & Programs
 
-[1] parsimony_wrapper.py  (contributed by: Scott Smith)
-[2] parse_maps.py (contributed by: Scott Smith)
-[3] awesomeMap2.pl  (contributed by: Shannon Schlueter)
-[4] phyFix_new2.pl  (contributed by: Shannon Schlueter with edits by Scott Smith)
-[5] rapidnj (contributed by: Aarhus University)
-[6] get_tips.py (contributed by: Scott Smith)
-[7] MergeMapOutCollect.py (contributed by: Shawn Chaffin)
-[8] MergeMap directory		
-	[a] MergeMap (application)  (contributed by: Yonghui Wu, University of California Riverside)
-	[b] tomapchart.awk  (contributed by: Steven Blanchard)
-	[c] tostandard.awk  (contributed by: Steven Blanchard)
-[9] Determine Success (contributed by: Scott Smith)
+1 parsimony_wrapper.py  (contributed by: Scott Smith)
+2 parse_maps.py (contributed by: Scott Smith)
+3 awesomeMap2.pl  (contributed by: Shannon Schlueter)
+4 phyFix_new2.pl  (contributed by: Shannon Schlueter with edits by Scott Smith)
+5 rapidnj (contributed by: Aarhus University)
+6 get_tips.py (contributed by: Scott Smith)
+7 MergeMapOutCollect.py (contributed by: Shawn Chaffin)
+8 MergeMap directory		
+	a MergeMap (application)  (contributed by: Yonghui Wu, University of California Riverside)
+	b tomapchart.awk  (contributed by: Steven Blanchard)
+	c tostandard.awk  (contributed by: Steven Blanchard)
+9 Determine Success (contributed by: Scott Smith)
 	
 ### Population files
 
