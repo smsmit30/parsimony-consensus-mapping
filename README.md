@@ -40,31 +40,31 @@ Construct a genetic consensus map from several diferent population genetic maps 
 1. the parsimony wrapper allows the user to run a single script which will iterate 
 through all the other scripts. Running this script will use the input population
 map files to create a consensus map
-	This script requires 2 additional Arguments. The first is the 
-	directory containing the population map files and the second is the number of 
-	iterations you would like to cycle through.
+This script requires 2 additional Arguments. The first is the 
+directory containing the population map files and the second is the number of 
+iterations you would like to cycle through.
 	
-		python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
-		example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
+	python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
+	example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
 
-		#NOTE: This script assumes items 1-9 in the above list of scripts are in 
-		the same directory and you are executing the scripts from that directory. items 
-		a-c are in the MergeMap directory.
+	#NOTE: This script assumes items 1-9 in the above list of scripts are in 
+	the same directory and you are executing the scripts from that directory. items 
+	a-c are in the MergeMap directory.
 
-		[output]
-			tree-build (directory)
-				neighbor joining trees for each iteration (newick.txt files)
-			working-directory
-				Maps (directory)
-					linkage group .txt files that represent the final merge 
-					results after all iterations are complete. It will also 
-					have individual population maps that were never 
-					included in any merge.
-				Tips.txt
-					text file listing merge id and the groups that were 
-					merged to create that group
-				Used_Maps (directory)
-					linkage group .txt files that were used in a merge
+	[output]
+		tree-build (directory)
+			neighbor joining trees for each iteration (newick.txt files)
+		working-directory
+			Maps (directory)
+				linkage group .txt files that represent the final merge 
+				results after all iterations are complete. It will also 
+				have individual population maps that were never 
+				included in any merge.
+			Tips.txt
+				text file listing merge id and the groups that were 
+				merged to create that group
+			Used_Maps (directory)
+				linkage group .txt files that were used in a merge
 
 1. parse_maps takes the original population files and splits them into individual 
 linkage group files.
