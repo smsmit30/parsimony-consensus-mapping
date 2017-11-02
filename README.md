@@ -36,39 +36,38 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	
 	
 ### Script Descriptions
+
 1. the parsimony wrapper allows the user to run a single script which will iterate 
 through all the other scripts. Running this script will use the input population
 map files to create a consensus map
+	This script requires 2 additional Arguments. The first is the 
+	directory containing the population map files and the second is the number of 
+	iterations you would like to cycle through.
 	
-This script requires 2 additional Arguments. The first is the 
-directory containing the population map files and the second is the number of 
-iterations you would like to cycle through.
-	
-	python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
-	example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
+		python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
+		example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
 
-	#NOTE: This script assumes items 1-9 in the above list of scripts are in 
-	the same directory and you are executing the scripts from that directory. items 
-	a-c are in the MergeMap directory.
+		#NOTE: This script assumes items 1-9 in the above list of scripts are in 
+		the same directory and you are executing the scripts from that directory. items 
+		a-c are in the MergeMap directory.
 
-	[output]
-		tree-build (directory)
-			neighbor joining trees for each iteration (newick.txt files)
-		working-directory
-			Maps (directory)
-				linkage group .txt files that represent the final merge 
-				results after all iterations are complete. It will also 
-				have individual population maps that were never 
-				included in any merge.
-			Tips.txt
-				text file listing merge id and the groups that were 
-				merged to create that group
-			Used_Maps (directory)
-				linkage group .txt files that were used in a merge
-	
-**the following is for if you want to run the scripts without using the wrapper**
+		[output]
+			tree-build (directory)
+				neighbor joining trees for each iteration (newick.txt files)
+			working-directory
+				Maps (directory)
+					linkage group .txt files that represent the final merge 
+					results after all iterations are complete. It will also 
+					have individual population maps that were never 
+					included in any merge.
+				Tips.txt
+					text file listing merge id and the groups that were 
+					merged to create that group
+				Used_Maps (directory)
+					linkage group .txt files that were used in a merge
+
 1. parse_maps takes the original population files and splits them into individual 
-	linkage group files
+linkage group files
 	
 	python parse_maps.py <path/to/unparsed/population/maps>
 	
@@ -78,9 +77,9 @@ iterations you would like to cycle through.
 			text files
 
 1. awesomeMap does pair wise alignments of all linkage groups and scores each
-	alignment. The pairwise scores are then used to produce a distance matrix 
-	which can be used to produce a neighbor joining tree showing which lgs are 
-	most closely related.
+alignment. The pairwise scores are then used to produce a distance matrix 
+which can be used to produce a neighbor joining tree showing which lgs are 
+most closely related.
 	
 	[usage] perl awesomeMap.pl <path/to/parsed/populations/*.txt > <output/file.phy>
 	example: awesomeMap.pl /.../Sample_population_maps/Maps/*.txt > temp.phy
