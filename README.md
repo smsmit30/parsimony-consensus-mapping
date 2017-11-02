@@ -88,7 +88,7 @@ most closely related.
 		temp.phy
 
 1. phyFix is used to reformat the distance matrix built by awesomeMap.
-	
+
 	perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
 	example: phyFix_new2.pl /.../Desktop/temp.phy > /.../Desktop/fixed_temp.phy
 	
