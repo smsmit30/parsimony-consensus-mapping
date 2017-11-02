@@ -19,7 +19,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 
 [7] MergeMapOutCollect.py (contributed by: Shawn Chaffin)
 
-[8] MergeMap directory		
+[8] MergeMap directory	
+
 	[a] MergeMap (application)  (contributed by: Yonghui Wu, University of California Riverside)
 	[b] tomapchart.awk  (contributed by: Steven Blanchard)
 	[c] tostandard.awk  (contributed by: Steven Blanchard)
@@ -30,14 +31,19 @@ Construct a genetic consensus map from several diferent population genetic maps 
 
 [1] All population files should be held in the same directory. Location of the 
 	directory is not important.
+	
 [2] The names of the population maps should be the population name only and 
 	should include only a-z, A-Z, 0-9. All special characters including 
 	_ should be avoided. Example population name: AM.txt (rather than 
 	AM_linkage_map.txt)
+	
 [3] No .txt files other than the population.txt files should be include in the 
 	population directory.
-[4] Population.txt file format should be tab delimitated with 3 columns [1] 
-	linkage group identifier, [2] marker name, and [3] map distance 
+	
+[4] Population.txt file format should be tab delimitated with 3 columns: 
+	[1] linkage group identifier
+	[2] marker name
+	[3] map distance 
 	(cumulative map distance rather than relative distance). Any header or 
 	footer should be removed.
 	
