@@ -67,14 +67,14 @@ map files to create a consensus map
 					linkage group .txt files that were used in a merge
 
 1. parse_maps takes the original population files and splits them into individual 
-linkage group files
+linkage group files.
 
-	python parse_maps.py <path/to/unparsed/population/maps>
+    python parse_maps.py <path/to/unparsed/population/maps>
 	
-	[output]
-		Maps (directory within the original unparsed population directory)
-			contains all the population linkage groups as individual 
-			text files
+    [output]
+        Maps (directory within the original unparsed population directory)
+	contains all the population linkage groups as individual 
+	text files
 
 1. awesomeMap does pair wise alignments of all linkage groups and scores each
 alignment. The pairwise scores are then used to produce a distance matrix 
