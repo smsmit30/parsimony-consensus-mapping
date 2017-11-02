@@ -44,34 +44,34 @@ map files to create a consensus map
 	directory containing the population map files and the second is the number of 
 	iterations you would like to cycle through.
 	
-	> python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
-	example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
+		python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
+		example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
 
-	> #NOTE: This script assumes items 1-9 in the above list of scripts are in 
-	the same directory and you are executing the scripts from that directory. items 
-	a-c are in the MergeMap directory.
+		#NOTE: This script assumes items 1-9 in the above list of scripts are in 
+		the same directory and you are executing the scripts from that directory. items 
+		a-c are in the MergeMap directory.
 
-	> [output]
-		tree-build (directory)
-			neighbor joining trees for each iteration (newick.txt files)
-		working-directory
-			Maps (directory)
-				linkage group .txt files that represent the final merge 
-				results after all iterations are complete. It will also 
-				have individual population maps that were never 
-				included in any merge.
-			Tips.txt
-				text file listing merge id and the groups that were 
-				merged to create that group
-			Used_Maps (directory)
-				linkage group .txt files that were used in a merge
+		[output]
+			tree-build (directory)
+				neighbor joining trees for each iteration (newick.txt files)
+			working-directory
+				Maps (directory)
+					linkage group .txt files that represent the final merge 
+					results after all iterations are complete. It will also 
+					have individual population maps that were never 
+					included in any merge.
+				Tips.txt
+					text file listing merge id and the groups that were 
+					merged to create that group
+				Used_Maps (directory)
+					linkage group .txt files that were used in a merge
 
 1. parse_maps takes the original population files and splits them into individual 
 linkage group files
+
+	python parse_maps.py <path/to/unparsed/population/maps>
 	
-	> python parse_maps.py <path/to/unparsed/population/maps>
-	
-	> [output]
+	[output]
 		Maps (directory within the original unparsed population directory)
 			contains all the population linkage groups as individual 
 			text files
@@ -89,14 +89,14 @@ most closely related.
 
 1. phyFix is used to reformat the distance matrix built by awesomeMap.
 
-	perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
+	[usage] perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
 	example: phyFix_new2.pl /.../Desktop/temp.phy > /.../Desktop/fixed_temp.phy
 	
 	[output]
 		fixed_temp.phy
 	
 1. rapidnj uses the distance matrix produced by awesomeMap to produce a neighbor 
-	joining tree in newick format.
+joining tree in newick format.
 	
 	./rapidnj -i pd fixed_file.phy > rnjtree.txt
 	
