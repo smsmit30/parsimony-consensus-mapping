@@ -1,9 +1,9 @@
 # parsimony-consensus-mapping
 Construct a genetic consensus map from several diferent population genetic maps using a parsomny clustering algorithm which identiies which linkage groups from each population should be merged.
 
-### Parsimony Consensus Map Construction ###
+## Parsimony Consensus Map Construction
 
-#Scripts & Programs#
+### Scripts & Programs
 
 [1] parsimony_wrapper.py  (contributed by: Scott Smith)
 [2] parse_maps.py (contributed by: Scott Smith)
@@ -18,7 +18,7 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	[c] tostandard.awk  (contributed by: Steven Blanchard)
 [9] Determine Success (contributed by: Scott Smith)
 	
-#Population files#
+### Population files
 
 [1] All population files should be held in the same directory. Location of the 
 	directory is not important.
@@ -34,7 +34,7 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	footer should be removed.
 	
 	
-###Script Descriptions###
+### Script Descriptions
 [1]	the parsimony wrapper allows the user to run a single script which will iterate 
 	through all the other scripts. Running this script will use the input population
 	map files to create a consensus map
@@ -65,7 +65,7 @@ Construct a genetic consensus map from several diferent population genetic maps 
 			Used_Maps (directory)
 				linkage group .txt files that were used in a merge
 	
-## the following is for if you want to run the scripts without using the wrapper ##
+#### the following is for if you want to run the scripts without using the wrapper
 [2] parse_maps takes the original population files and splits them into individual 
 	linkage group files
 	[usage]
