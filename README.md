@@ -53,11 +53,11 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	through all the other scripts. Running this script will use the input population
 	map files to create a consensus map
 	
-	[usage] This script requires 2 additional <Arguments>. The first is the 
+	This script requires 2 additional <Arguments>. The first is the 
 	directory containing the population map files and the second is the number of 
 	iterations you would like to cycle through. (
 	
-		python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
+	python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
 	example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
 
 	#NOTE: This script assumes items 1-9 in the above list of scripts are in 
