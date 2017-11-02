@@ -41,10 +41,10 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	population directory.
 	
 [4] Population.txt file format should be tab delimitated with 3 columns: 
+
 	[1] linkage group identifier
 	[2] marker name
-	[3] map distance 
-	(cumulative map distance rather than relative distance). Any header or 
+	[3] map distance (cumulative map distance rather than relative distance). Any header or 
 	footer should be removed.
 	
 	
@@ -57,7 +57,7 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	directory containing the population map files and the second is the number of 
 	iterations you would like to cycle through. (
 	
-	python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
+		python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
 	example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
 
 	#NOTE: This script assumes items 1-9 in the above list of scripts are in 
