@@ -3,7 +3,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 
 ### Parsimony Consensus Map Construction ###
 
-Scripts & Programs:
+#Scripts & Programs:#
+
 [1] parsimony_wrapper.py  (contributed by: Scott Smith)
 [2] parse_maps.py (contributed by: Scott Smith)
 [3] awesomeMap2.pl  (contributed by: Shannon Schlueter)
@@ -17,7 +18,8 @@ Scripts & Programs:
 	[c] tostandard.awk  (contributed by: Steven Blanchard)
 [9] Determine Success (contributed by: Scott Smith)
 	
-Population files:
+#Population files:#
+
 [1] All population files should be held in the same directory. Location of the 
 	directory is not important.
 [2] The names of the population maps should be the population name only and 
