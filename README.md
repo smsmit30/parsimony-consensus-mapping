@@ -5,46 +5,33 @@ Construct a genetic consensus map from several diferent population genetic maps 
 
 ### Scripts & Programs
 
-[1] parsimony_wrapper.py  (contributed by: Scott Smith)
-
-[2] parse_maps.py (contributed by: Scott Smith)
-
-[3] awesomeMap2.pl  (contributed by: Shannon Schlueter)
-
-[4] phyFix_new2.pl  (contributed by: Shannon Schlueter with edits by Scott Smith)
-
-[5] rapidnj (contributed by: Aarhus University)
-
-[6] get_tips.py (contributed by: Scott Smith)
-
-[7] MergeMapOutCollect.py (contributed by: Shawn Chaffin)
-
-[8] MergeMap directory	
-
-	[a] MergeMap (application)  (contributed by: Yonghui Wu, University of California Riverside)
-	[b] tomapchart.awk  (contributed by: Steven Blanchard)
-	[c] tostandard.awk  (contributed by: Steven Blanchard)
-	
-[9] Determine Success (contributed by: Scott Smith)
+1. parsimony_wrapper.py  (contributed by: Scott Smith)
+1. parse_maps.py (contributed by: Scott Smith)
+1. awesomeMap2.pl  (contributed by: Shannon Schlueter)
+1. phyFix_new2.pl  (contributed by: Shannon Schlueter with edits by Scott Smith)
+1. rapidnj (contributed by: Aarhus University)
+1. get_tips.py (contributed by: Scott Smith)
+1. MergeMapOutCollect.py (contributed by: Shawn Chaffin)
+1. MergeMap directory
+	1. MergeMap (application)  (contributed by: Yonghui Wu, University of California Riverside)
+	1. tomapchart.awk  (contributed by: Steven Blanchard)
+	1. tostandard.awk  (contributed by: Steven Blanchard)	
+1. Determine Success (contributed by: Scott Smith)
 	
 ### Population files
 
-[1] All population files should be held in the same directory. Location of the 
-	directory is not important.
-	
-[2] The names of the population maps should be the population name only and 
+1. All population files should be held in the same directory. Location of the 
+	directory is not important.	
+1. The names of the population maps should be the population name only and 
 	should include only a-z, A-Z, 0-9. All special characters including 
 	_ should be avoided. Example population name: AM.txt (rather than 
-	AM_linkage_map.txt)
-	
-[3] No .txt files other than the population.txt files should be include in the 
-	population directory.
-	
-[4] Population.txt file format should be tab delimitated with 3 columns: 
-
-	[1] linkage group identifier
-	[2] marker name
-	[3] map distance (cumulative map distance rather than relative distance). 
+	AM_linkage_map.txt)	
+1. No .txt files other than the population.txt files should be include in the 
+	population directory.	
+1. Population.txt file format should be tab delimitated with 3 columns: 
+	1. linkage group identifier
+	1. marker name
+	1. map distance (cumulative map distance rather than relative distance). 
 	Any header or footer should be removed.
 	
 	
