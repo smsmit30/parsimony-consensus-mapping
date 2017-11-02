@@ -9,7 +9,7 @@ def Mkdir(directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
     else:
-        print "%s is already exist!!!" %directory
+        print "%s already exist!" %directory
 def DetermMergeSucess(dir):
     filelist = glob.glob(dir+"/*.dot")
     if len(filelist)==3:
