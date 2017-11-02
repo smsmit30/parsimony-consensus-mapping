@@ -2,9 +2,7 @@
 
 # import modules
 import sys
-# sys allows us to call system functions
 import re
-# re allows us to use regular expression
 import os
 from random import randint
 import shutil
@@ -19,7 +17,7 @@ if len(sys.argv) != 3:
 	print ('usage: python get_tips.py [path/to/newick/tree.txt] [linkag/maps/dir]')
 	quit()
 
-# create variables to hold the arguments (probably unnecessary  but makes for easier readability)	
+# create variables to hold the arguments and set up directories	
 startdir = os.getcwd()
 newick = os.path.abspath(sys.argv[1])
 maps_dir = os.path.abspath(sys.argv[2])
@@ -48,8 +46,6 @@ counter = 1
 
 # dump contents of tree file into variable 'tree'
 tree = open(newick).read()
-# open(newick) opens the file
-#.read() reads it into the variable
 
 # use regular expression to find tips and store matches in the variable 'Tips'
 Tips = re.finditer(r"\(\'(\w+)\':(\d+\.?\d*),\'(\w+)\':(\d+\.?\d*)\)", tree)
@@ -71,7 +67,7 @@ Tips = re.finditer(r"\(\'(\w+)\':(\d+\.?\d*),\'(\w+)\':(\d+\.?\d*)\)", tree)
 
 ### iterate through the Tips object and print just the parts of the match we want ###
 
-# open a file to write the tip pairs and their tip ID (must be opened and closed outside the loop or it gets overwritten and you only gen the last tip.
+# open a file to write the tip pairs and their tip ID (must be opened and closed outside the loop or it gets overwritten and you only get the last tip.
 with open(working_dir+"/Tips.txt", "a") as tips_out:
 	# write a header line for the tip file
 	os.chdir(maps_dir)
@@ -109,14 +105,14 @@ with open(working_dir+"/Tips.txt", "a") as tips_out:
 		
 		## set up config file and move maps ##
 		config_file = open(mergemap_dir+"/mergemap_config.txt",'w')
-#		
+		
 		#create config file in mergemap folder containing the linkage group file names
 		config_file.write ("M1 1 "+tip1+".mergemap.txt\n"+"M2 1 "+tip2+".mergemap.txt")
-#	
-#		# move files from Maps dir to merge dir
+	
+		# move files from Maps dir to merge dir
 		shutil.move(dup_maps_dir+"/"+tip1+".txt",new_tip_dir)
 		shutil.move(dup_maps_dir+"/"+tip2+".txt",new_tip_dir)
-#		# increase the counter 
+		# increase the counter 
 		counter += 1
 		
 ### convert file from original format to mergemap format ###
