@@ -44,8 +44,8 @@ Construct a genetic consensus map from several diferent population genetic maps 
 
 	[1] linkage group identifier
 	[2] marker name
-	[3] map distance (cumulative map distance rather than relative distance). Any header or 
-	footer should be removed.
+	[3] map distance (cumulative map distance rather than relative distance). 
+	Any header or footer should be removed.
 	
 	
 ### Script Descriptions
@@ -53,9 +53,9 @@ Construct a genetic consensus map from several diferent population genetic maps 
 	through all the other scripts. Running this script will use the input population
 	map files to create a consensus map
 	
-This script requires 2 additional <Arguments>. The first is the 
-	directory containing the population map files and the second is the number of 
-	iterations you would like to cycle through.
+This script requires 2 additional Arguments. The first is the 
+directory containing the population map files and the second is the number of 
+iterations you would like to cycle through.
 	
 	python parsimony_wrapper.py <path/to/population/map/directory> <# of iterations>
 	example: pyhton parsimony_wrapper.py /Desktop/Sample_population_maps 8
@@ -83,7 +83,7 @@ This script requires 2 additional <Arguments>. The first is the
 [2] parse_maps takes the original population files and splits them into individual 
 	linkage group files
 	
-	[usage] python parse_maps.py <path/to/unparsed/population/maps>
+	python parse_maps.py <path/to/unparsed/population/maps>
 	
 	[output]
 		Maps (directory within the original unparsed population directory)
@@ -103,7 +103,7 @@ This script requires 2 additional <Arguments>. The first is the
 
 [4] phyFix is used to reformat the distance matrix built by awesomeMap.
 	
-	[usage] perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
+	perl phyFix_new2.pl <path/to/file.phy > <output/fixed_file.phy>
 	example: phyFix_new2.pl /.../Desktop/temp.phy > /.../Desktop/fixed_temp.phy
 	
 	[output]
@@ -112,7 +112,7 @@ This script requires 2 additional <Arguments>. The first is the
 [5] rapidnj uses the distance matrix produced by awesomeMap to produce a neighbor 
 	joining tree in newick format.
 	
-	[usage] ./rapidnj -i pd fixed_file.phy > rnjtree.txt
+	./rapidnj -i pd fixed_file.phy > rnjtree.txt
 	
 	[output]
 		rnjtree.txt
@@ -122,7 +122,7 @@ This script requires 2 additional <Arguments>. The first is the
 	corresponding to the tips identified. This directory set up is required by 
 	MergeMapOutCollect.py
 	
-	[usage] python get_tips.py <path/to/newicktree.txt> <path/to//un-parsed/pop/map/files>
+	python get_tips.py <path/to/newicktree.txt> <path/to//un-parsed/pop/map/files>
 	example: python get_tips.py rnjtree.txt /Users/ss324/Desktop/Sample_pop_maps
 	
 	[output]
@@ -136,7 +136,7 @@ This script requires 2 additional <Arguments>. The first is the
 		OUTPUT (empty directory)
 [7] MergeMapOutCollect is a wrapper for running the mergemap application.
 	
-	[usage] python MergeMapOutCollect.py </input/dir/> </output/dir/> </MergeMap/dir/>
+	python MergeMapOutCollect.py </input/dir/> </output/dir/> </MergeMap/dir/>
 	example: MergeMapOutCollect.py /.../mergetips/ /.../OUTPUT/ /.../MergeMap/
 	
 	[output]
@@ -159,7 +159,7 @@ This script requires 2 additional <Arguments>. The first is the
 	together successfully resulting in a single linkage group and prepares for the 
 	next iteration.
 	
-	[usage] python Determine_Success.py <path/to/working_directory>
+	python Determine_Success.py <path/to/working_directory>
 	example: Determine_success.py /.../Desktop/Sample_pop_maps/working_directory
 	
 	[output]
